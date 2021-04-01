@@ -5,13 +5,26 @@ class NavBar extends React.Component {
   state = {};
 
   render() {
+    const font = {
+      'font-family': 'Courier New'
+    }
+    const display = {
+      'font-family': 'Courier New',
+      'display':'flex',
+      'justify-content': 'flex-end',
+    }
+    const buttons = {
+      'margin': '2px'
+    }
     return (
       <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap shadow">
-        <span className="navbar-brand bg-dark mr-0">
+        <span className="navbar-brand bg-dark mr-0" style={font}>
           Filipe Afonso
         </span>
-        <Button>Projects</Button>
-        <Button>About</Button>
+        <div style={display}>
+          <Button style={buttons} className="btn btn-light">Projects</Button>
+          <Button style={buttons} className="btn btn-light">About me</Button>
+        </div>
       </nav>
     );
   }
