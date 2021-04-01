@@ -4,14 +4,22 @@ import Button from "react-bootstrap/button";
 class NavBar extends React.Component {
   state = {};
 
+  projectsdashboard = () => {
+    console.log('Projects DashBoard')
+  }
+
+  aboutme =  () => {
+    console.log('About me')
+  }
+
   render() {
     const font = {
-      'font-family': 'Courier New'
+      'fontFamily': 'Courier New'
     }
     const display = {
-      'font-family': 'Courier New',
+      'fontFamily': 'Courier New',
       'display':'flex',
-      'justify-content': 'flex-end',
+      'justifyContent': 'flex-end',
     }
     const buttons = {
       'margin': '2px'
@@ -22,8 +30,8 @@ class NavBar extends React.Component {
           Filipe Afonso
         </span>
         <div style={display}>
-          <Button style={buttons} className="btn btn-light">Projects</Button>
-          <Button style={buttons} className="btn btn-light">About me</Button>
+          <Button style={buttons} className="btn btn-light" onClick={this.projectsdashboard}>Projects</Button>
+          <Button style={buttons} className="btn btn-light" onClick={this.aboutme}>About me</Button>
         </div>
       </nav>
     );
